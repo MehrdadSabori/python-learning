@@ -47,13 +47,69 @@
 # for product in products:
 #     print(product)
 # ---------------------------------------
-products = ["laptop", "mouse", "keyboard", "monitor"]
+# products = ["laptop", "mouse", "keyboard", "monitor"]
 
-for i in range(1, 4):
+# for i in range(1, 4):
 
-    userProduct = input('enter your product: ')
+#     userProduct = input('enter your product: ')
+
+#     if userProduct in products:
+#         print('product is available')
+#     else:
+#         print('product is not available')
+# ----------------------------
+# user = {
+#     'name':'mehrdad',
+#     'age' : 28,
+#     'city': 'tehran'
+# }
+
+# print(user['name'], user['age'])
+
+# if 'phone' in user:
+#     print(user['phone'])
+# else:
+#     print('phone number not registered')
+
+# user['phone'] = '090398'
+# print(user['phone'])
+# --------------------------------
+# inputName = input('enter your name: ')
+# inputAge = int(input('enter your age: '))
+# inputcity = input('enter your city: ')
+
+# user = {
+#     'name' : inputName,
+#     'age' : inputAge,
+#     'city' : inputcity
+# }
+
+# inputPhone = input('do you have a phone? ')
+
+# if inputPhone == 'yes':
+
+#     inputNumber = input('enter your phone: ')
+
+#     user['phone'] = inputNumber
+
+
+# elif inputPhone == 'no':
+#     pass
+
+# for key, value in user.items():
+#     print(key, value)
+# -------------------------------------
+product1 = ['mouse', 'keyboard', 'monitor', 'case', 'cable']
+
+inputProduct = input('enter your product: ')
+
+def check_products(products, product):
     
-    if userProduct in products:
-        print('product is available')
+    if product in products:
+
+        return 'product is available'
     else:
-        print('product is not available')
+        return 'product is not available'
+    
+result = check_products(product1, inputProduct)
+print(result)
