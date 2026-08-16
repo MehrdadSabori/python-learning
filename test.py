@@ -99,17 +99,42 @@
 # for key, value in user.items():
 #     print(key, value)
 # -------------------------------------
-product1 = ['mouse', 'keyboard', 'monitor', 'case', 'cable']
+# product1 = ['mouse', 'keyboard', 'monitor', 'case', 'cable']
 
-inputProduct = input('enter your product: ')
+# inputProduct = input('enter your product: ')
 
-def check_products(products, product):
+# def check_products(products, product):
     
-    if product in products:
+#     if product in products:
 
-        return 'product is available'
+#         return 'product is available'
+#     else:
+#         return 'product is not available'
+    
+# result = check_products(product1, inputProduct)
+# print(result)
+# -------------------------
+products = {
+    'mouse' : 3,
+    'monitor' : 0,
+    'case' : 6
+}
+inputUser = input('enter name product: ')
+
+def check_product(product, inputValue):
+    
+    if inputValue in product:
+      
+        if product[inputValue] != 0:
+       
+            return f"{inputValue} is avalibale {product[inputValue]} in stock"
+    
+        elif product[inputValue] == 0:
+        
+            return f"{inputValue} is out of stock"
     else:
-        return 'product is not available'
-    
-result = check_products(product1, inputProduct)
+        return 'product not found'
+
+result = check_product(products, inputUser)
+
 print(result)
