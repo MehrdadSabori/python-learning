@@ -38,11 +38,22 @@
 #     else:
 #         print('invalid choice')
 # ------------------------------------
-products = []
+# products = []
 
-for shop in range(1,4):
-    shopList = input('Enter your product list: ')
-    products.append(shopList)
+# for shop in range(1,4):
+#     shopList = input('Enter your product list: ')
+#     products.append(shopList)
 
-for product in products:
-    print(product)
+# for product in products:
+#     print(product)
+# ---------------------------------------
+products = ["laptop", "mouse", "keyboard", "monitor"]
+
+for i in range(1, 4):
+
+    userProduct = input('enter your product: ')
+    
+    if userProduct in products:
+        print('product is available')
+    else:
+        print('product is not available')
