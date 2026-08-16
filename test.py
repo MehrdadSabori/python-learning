@@ -20,20 +20,29 @@
 #     print(number)
 #     number = number + 1
 # --------------------
-helpUser = "1.show number even \n2.show number odd \n3.exit"
-while True:
-    print(helpUser)
-    userNumber = int(input("enter your number: "))
-    if userNumber == 1:
-        for numbers in range(1, 11):
-            if numbers % 2 == 0:
-                print(numbers)
-    elif userNumber == 2:
-        for numbers in range(1, 11):
-            if numbers % 2 == 1:
-                print(numbers)
-    elif userNumber == 3:
-        print('exite')
-        break
-    else:
-        print('invalid choice')
+# helpUser = "1.show number even \n2.show number odd \n3.exit"
+# while True:
+#     print(helpUser)
+#     userNumber = int(input("enter your number: "))
+#     if userNumber == 1:
+#         for numbers in range(1, 11):
+#             if numbers % 2 == 0:
+#                 print(numbers)
+#     elif userNumber == 2:
+#         for numbers in range(1, 11):
+#             if numbers % 2 == 1:
+#                 print(numbers)
+#     elif userNumber == 3:
+#         print('exite')
+#         break
+#     else:
+#         print('invalid choice')
+# ------------------------------------
+products = []
+
+for shop in range(1,4):
+    shopList = input('Enter your product list: ')
+    products.append(shopList)
+
+for product in products:
+    print(product)
