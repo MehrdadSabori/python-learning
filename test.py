@@ -20,17 +20,20 @@
 #     print(number)
 #     number = number + 1
 # --------------------
-helpUser = '1.show number even' \
-'2.show number odd' \
-'3.exite'
-userNumber = int(input('enter your number: '))
-if userNumber == 1:
-    for numbers in range(1, 11):
-        numbers % 2 == 0
-        print(numbers)
-elif userNumber == 2:
-    for numbers in range(1, 10):
-        numbers % 2 == 1
-        print(numbers)
-else:
-    print('invalid choice')    
+helpUser = "1.show number even \n2.show number odd \n3.exit"
+while True:
+    print(helpUser)
+    userNumber = int(input("enter your number: "))
+    if userNumber == 1:
+        for numbers in range(1, 11):
+            if numbers % 2 == 0:
+                print(numbers)
+    elif userNumber == 2:
+        for numbers in range(1, 11):
+            if numbers % 2 == 1:
+                print(numbers)
+    elif userNumber == 3:
+        print('exite')
+        break
+    else:
+        print('invalid choice')
