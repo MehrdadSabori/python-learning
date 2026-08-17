@@ -114,27 +114,70 @@
 # result = check_products(product1, inputProduct)
 # print(result)
 # -------------------------
-products = {
-    'mouse' : 3,
-    'monitor' : 0,
-    'case' : 6
-}
-inputUser = input('enter name product: ')
+# products = {
+#     'mouse' : 3,
+#     'monitor' : 0,
+#     'case' : 6
+# }
+# inputUser = input('enter name product: ')
 
-def check_product(product, inputValue):
+# def check_product(product, inputValue):
     
-    if inputValue in product:
+#     if inputValue in product:
       
-        if product[inputValue] != 0:
+#         if product[inputValue] != 0:
        
-            return f"{inputValue} is avalibale {product[inputValue]} in stock"
+#             return f"{inputValue} is avalibale {product[inputValue]} in stock"
     
-        elif product[inputValue] == 0:
+#         elif product[inputValue] == 0:
         
-            return f"{inputValue} is out of stock"
+#             return f"{inputValue} is out of stock"
+#     else:
+#         return 'product not found'
+
+# result = check_product(products, inputUser)
+
+# print(result)
+# -----------------------
+product1 = {
+    'mouse': 3,
+    'keyboard': 5,
+    'monitor': 0
+}
+
+
+def check_products(products, inputValue):
+    
+    if inputValue in products:
+       
+        if products[inputValue] == 0 :
+            return f'{inputValue} is out of stock'
+        else:
+            return f'{inputValue} is available {products[inputValue]} in stock'
+        
     else:
         return 'product not found'
 
-result = check_product(products, inputUser)
+while True:
 
-print(result)
+    print('1.check product \n2.show product \n3.Exit')
+    inputMenu = int(input('enter number : '))
+    
+    if inputMenu == 1:
+
+        inputUser = input('enter your product name: ')
+        result = check_products(product1, inputUser)
+        print(result)
+
+    elif inputMenu == 2:
+
+        for key, value in product1.items():
+            print(key, value)
+
+    elif inputMenu == 3:
+
+        print('Exit')
+        break
+    
+    else:
+        print('not valid number menu')
