@@ -145,7 +145,6 @@ product1 = {
     'monitor': 0
 }
 
-
 def check_products(products, inputValue):
     
     if inputValue in products:
@@ -157,27 +156,33 @@ def check_products(products, inputValue):
         
     else:
         return 'product not found'
+    
+def show_product(product):
+    for key, value in product.items():
+        print(key, value)
 
 while True:
+    try:
+        print('1.check product \n2.show product \n3.Exit')
+        inputMenu = int(input('enter number : '))
+        
+        if inputMenu == 1:
 
-    print('1.check product \n2.show product \n3.Exit')
-    inputMenu = int(input('enter number : '))
-    
-    if inputMenu == 1:
+            inputUser = input('enter your product name: ')
+            result = check_products(product1, inputUser)
+            print(result)
 
-        inputUser = input('enter your product name: ')
-        result = check_products(product1, inputUser)
-        print(result)
+        elif inputMenu == 2:
 
-    elif inputMenu == 2:
+            show_product(product1)
 
-        for key, value in product1.items():
-            print(key, value)
+        elif inputMenu == 3:
 
-    elif inputMenu == 3:
-
-        print('Exit')
-        break
-    
-    else:
-        print('not valid number menu')
+            print('Exit')
+            break
+        else:
+            print('invalid menu number')
+        
+    except ValueError:
+            print('not valid number menu')
+            continue
